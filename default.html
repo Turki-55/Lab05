@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Default Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>People List</h1>
+    <ul>
+        {% for person in people %}
+            <li>{{ person.username }}</li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'add' %}">Add a Person</a></p>
+</body>
+</html>
